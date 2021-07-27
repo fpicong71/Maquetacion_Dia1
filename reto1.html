@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reto 1</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            text-decoration: none;
+            box-sizing:border-box;
+        }
+        html{
+            background: linear-gradient(135deg, rgba(249, 213, 172, 0.333) 25%, transparent 25%) -16px 0px / 32px 32px, 
+                        linear-gradient(225deg, rgb(249, 213, 172) 25%, transparent 25%) -16px 0px / 32px 32px, 
+                        linear-gradient(315deg, rgba(249, 213, 172, 0.333) 25%, transparent 25%) 0px 0px / 32px 32px, 
+                        linear-gradient(45deg, rgb(249, 213, 172) 25%, rgb(247, 240, 230) 25%) 0px 0px / 32px 32px;
+                        margin:0;
+                        padding:0;
+        }
+        body{
+            font-size: 16px;
+            line-height: 1.5rem;
+            font-family: 'Times New Roman', Times, serif;    
+            background-color: rgba(255, 241, 202, 0.7); 
+        }
+        p{
+            margin: 1rem 0;
+        }
+        header{
+            background-color:blue;
+            margin: 0 auto;
+            padding:5rem;
+        }
+
+        h1{
+            color:white;
+            font-size: 4.5rem;
+            text-align: center;
+            font-family:'Courier New', Courier, monospace;
+        }
+
+        #canvas{
+            width: 80vw;
+            margin: 0 auto;
+            padding: 5vw 0 0 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            background-color: rgba(255, 241, 202, 0.8);
+        }
+
+        nav{
+            width: 20%;
+            background-color: rgba(248, 161, 47, 1);
+            border: 2px double blue;
+            padding: 2rem 1rem;
+            align-self: flex-start;
+            font-family:'Courier New', Courier, monospace;
+
+        }
+        nav ul li{
+            list-style-type:none;
+            margin: 1rem 0;
+        }
+
+        nav ul li a{
+            color:blue;
+            font-size:1.2rem;
+            font-weight: bold; 
+        }
+
+        nav ul li a:hover{
+            color:rgba(0, 12, 117, 0.863);
+            text-decoration:underline;
+        }
+        main{
+          width: 78%;
+          background-color:white;
+          border:1px solid rgba(249, 213, 172);
+          padding: 2vw 3.5vw;
+        }
+
+        hgroup{
+            text-align: center;
+            margin-bottom: 5vw;
+            font-family:'Courier New', Courier, monospace;
+        }
+
+        #los90>img{
+            width:100%;
+            display:block;
+            margin:3rem 0;
+        }
+
+        h2{
+            font-size: 3.5rem;
+            line-height: 3.8rem;
+            color:hsl(34, 100%, 40%);
+        }
+
+        h3{
+            font-size: 2.0rem;
+            line-height: 2.8rem;
+            color: blue;
+            opacity: 0.6;
+        }
+        h4{
+            font-size: 1.5rem;
+            background-color:hsl(34, 100%, 40%);
+            color:white;
+            padding:0.8rem;
+            margin:1.5rem 0;
+        }
+
+        .apartados{
+            padding:0 1rem;
+        }
+
+        .subapartados{
+            width: 100%;
+            display:flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+            align-items: flex-start;
+        }
+
+        .contentSubapartados{
+            width:70%;
+            margin-left: 2%;
+            align-self: flex-start;
+        }
+
+        .imgSubapartadoIzq,.imgSubapartadoDcha{
+            width:20%;
+            justify-self: start;
+            align-self:flex-start;
+        }
+    
+
+        h5{
+            font-size: 1.17rem;
+            color:blue;
+            margin-top:2rem;
+        }
+
+        .tag{
+            margin:5rem 0 3rem 0;
+
+        }
+
+        #enlos90{
+            display:flex;
+            flex-direction:row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .card{
+            width:32%;
+            border: 1px solid blue;
+            padding: 2rem 1.5rem;
+        }
+        .card h5{
+            text-align: center;
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin:0;
+            color: hsl(34, 100%, 40%);
+        }
+
+        .card h6{
+            text-align: center;
+            font-size: 1.15rem;
+            padding: 0.5rem;
+            background-color: rgba(5, 5, 255,.5);;
+            color:white;
+            margin:3rem 0 2rem 0;
+        }
+        .listas li{
+            list-style-type: none;
+            font-style: italic;
+            text-align: center;
+            margin: 0 0 1.5rem;
+            line-height:1.1rem;
+        }
+
+        footer{
+            width:100%;
+            background-color: rgb(5, 5, 255);
+            color:white;
+            text-align: center;
+            padding:1rem;
+        }
+
+        footer p{
+            margin:0;
+        }
+        
+
+    </style>
+
+</head>
+<body>
+    <header>
+        <h1>Bienvenidos a los 90</h1>
+    </header>
+
+    <div id="container">
+        <div id="canvas">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#los90">Los 90:gran decada</a>
+                    </li>
+                    <li>
+                        <a href="#enlos90">Mirando los 90</a>
+                        <ul>
+                            <li>
+                                <a href="#musica">Musica</a>
+                            </li>
+                            <li>
+                                <a href="#peliculas">Peliculas</a>
+                            </li>
+
+                            <li>
+                                <a href="#series">Series</a>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                </ul>
+            </nav>
+
+            <main>
+                
+
+                <section id="los90">
+                    <div>
+                        <hgroup>
+                            <h2>Los 90´s</h2>
+                            <h3>Esa gran decada</h3>
+                        </hgroup>
+
+                        <p>
+                            El decenio de los años 90 del siglo XX o, popularmente conocido como los 90's o década de 1990, comprenden el periodo de tiempo que se dio entre el 1 de enero de 1990 al 31 de diciembre de 1999.
+                        </p>
+
+                        <img src="https://img.vixdata.io/pd/webp-large/es/sites/default/files/p/portada-back-to-the-90s.jpg" alt="Los 90">
+
+                        <div id="historiaPolitica" class="tag">
+                            <h4>Historia & Política</h4>
+                            <div class="apartados">
+                                <div class="subapartados">
+                                    <div class="contentSubapartados">
+                                        <h5>El Mundo</h5>
+                                        <p>
+                                            A nivel político, estuvieron marcados por la caida del muro de Berlin y de los países del bloque comunista. Supuso el fín de la Guerra Fría. Se produjeron los atentados terroristas del World Trade Center. Y se puso fín al regímen del apartheid en Sudáfrica.
+            
+                                            Estados Unidos es la gran potencia económica y política. Mientras el bloque soviético se fragmenta dando paso a nuevos paises y conflictos.
+                                        </p>       
+                                    </div>
+                                    <img src="https://3.bp.blogspot.com/-1mkdGzQuXtA/WlEuEmdEI-I/AAAAAAAAtd0/pJGdbq4Yym8flfsFcVu2p2BiaO2UYtKXgCLcBGAs/s1600/LO%2BQUE%2BQUEDA%2BDEL%2BAPARTHEID%2BEN%2BSUD%25C3%2581FRICA.jpg" alt="Apartheid" class="imgSubapartadoDcha">
+                                
+                                </div>
+                                
+                                <div class="subapartados"> 
+                                    <img src="https://media.theobjective.com/2017/08/lo-que-represento-el-muro-de-berlin-para-la-literatura-de-posguerra-4-767x970.jpg" alt="" class="imgSubapartadoIzq">
+                                    <div class="contentSubapartados">
+                                        <h5>Europa</h5>
+                                        <p>
+                                            El proyecto Europeo se afianza. Incorporando más paises y construyendo la identidad Europea.
+                                            Nace el euro como moneda común de la Unión Europea, que facilita el comercio entre paises. 
+                                            
+                                            Se construye el eurotunel que unirá el continente con Gran Bretaña. 
+            
+                                            En está decada, consecuencia de la desintegración de la U.R.S.S, surgen nuevos paises y nuevos conflictos. Especial mención la Guerra de Bosnia, que trajo la crueldad y la limpieza étnica al corazón de Eduropa.
+                                        </p> 
+                                    </div>
+                                </div>
+                                
+                                <div class="subapartados"> 
+                                    <div class="contentSubapartados">
+                                        <h5>España</h5>
+                                        <p>
+                                            En España son tiempos de bonanza económica y de afianzamiento de la democracía, impulsados por eventos como las olímpiadas de Barcelona 92 y la Expo de Sevilla.
+            
+                                            También son tiempos en que E.T.A golpea con mano dura, con violentos atentados, secuestros y asesinatos.
+            
+                                            Llegan a la televisión los canales privados.
+                                        </p>   
+                                    </div>
+                                    <img src="https://imagenes.elpais.com/resizer/tl1VtwpcA_NtQNH3KcP40nsuU1M=/980x735/arc-anglerfish-eu-central-1-prod-prisa.s3.amazonaws.com/public/TFLAFLQ4ZCK3NWDG4CB4IXRHV4.jpg" alt="Olimpiadas Barcelona92" class="imgSubapartadoDcha">  
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div id="vida" class="tag">
+                            <h4>Logros</h4>
+                            <div class="apartados">
+                                <p>
+                                    Como uno de los grandes logros de la humanidad cabe destacar la clonación de un animal, por primera vez en la historia: "La oveja Dolly".
+                                </p>
+                                <p>
+                                    La creación de la Viagra, la pequeña pastilla azul que revolucionó la vida sexual de los hombres y mujeres del planeta.
+                                </p>
+                                <p>
+                                    Son años de revolución tecnológica. 
+                                    Crece y se desarrolla la www, internet. Aparecen los primeros móviles, son la mensajería sms y los primeros juegos. Se popularizan los ordenadores personales con el sistema Windows, y los imac con su futurista y atractivo diseño. Aparecen las primeras consolas de juegos, el diskman y los dvd.
+    
+                                    Jugabamos con los tamagochi o con la gameboy.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="enlos90">
+                    <div id="musica" class="card">
+                        <h5>Música</h5>
+                        <p>
+                            La música de los 90 supuso la búsqueda de nuevos estilos, de novedades en el panorama musical. 
+
+                            Se popularizan los “unplugged”, los “remix”, y la figura del DJ.
+
+                            Nacen estilos como el "grunge" y el "britpop".
+                        </p>
+                        <h6>Hit Parade</h6>
+                        <ul class="listas">
+                            <li>Nirvana, ‘Smells like teen spirit’ (1991)</li>
+                            <li>TLC, ‘Waterfalls’ (1995) </li>
+                            <li>PJ Harvey, ‘Down by the water’ (1995) </li>
+                            <li>Massive Attack, ‘Unfinished sympathy’ </li>
+                            <li>Nenneh Cherry, ‘Woman’ (1996) </li>
+                            <li>Björk, ‘Army of me’ (1995) </li>
+                            <li>Pulp, ‘Common people’ (1995) </li>
+                            <li>Daft Punk, ‘Da Funk’ (1997) </li>
+                            <li>Oasis, ‘Live forever’ (1994) </li>
+                            <li>Sinéad O’Connor, ‘Nothing compares 2 U’ (1990) </li>
+                        </ul>
+                    </div>
+
+                    <div id="peliculas" class="card">
+                        <h5>Cine</h5>
+                        <p>
+                            Una década en la que el cine se volvió tecnológico, los ordenadores superaron sus capacidades y en la que el sueldo de un actor llegó por primera vez a los 20 millones de dólares.
+
+                        </p>
+                        <h6>Películas más taquilleras</h6>
+                        <ul class="listas">
+                            <li>Titanic - James Cameron (1997)</li>
+                            <li>Parque Jurásico -Steven Spielberg (1993)</li>
+                            <li>Star Wars: Episodio I – La amenaza fantasma - George Lucas (1999)</li>
+                            <li> El rey león - Rob Minkoff y Roger Allers (1994)</li>
+                            <li>Independence Day - Roland Emmerich (1996)</li>
+                            <li>Forrest Gump - Robert Zemeckis (1994)</li>
+                            <li>El sexto sentido - M. Night Shyamalan (1999)</li>
+                            <li>El mundo perdido: Parque Jurásico - Steven Spielberg (1997)</li>
+                            <li>Hombres de negro - Barry Sonnenfeld (1997)</li>
+                            <li>Armageddon - Michael Bay (1998)</li>
+                        </ul>
+                    </div>
+                    <div id="series" class="card">
+                        <h5>Series</h5>
+                        <p>
+                            Las series se popularizan, generando ordas de espectadores ansiosos por ver una entrega nueva de sus seríe favorita.
+
+                            Surgen series de animación para adultos como los Simpson, South Park o Futurama.
+
+                            En España, con la irrupción de los canales privados, también tenemos nuestras series. "Farmacia de Guardia", "Médico de Familia", "Al salir de clase" o "7vidas" son ejemplos de las series patrias.
+
+                        </p>
+                        <h6>Series</h6>
+                        <ul class="listas">
+                            <li>Friends</li>
+                            <li>Expediente X</li>
+                            <li>Los vigilantes de la playa</li>
+                            <li>Sexo en Nueva York</li>
+                            <li>Twin Peaks</li>
+                            <li>El principe de Bel Air</li>
+                            <li>Los simpsons</li>
+                            <li>Beverly Hills 90210</li>
+                            <li>Melrose Place</li>
+                            <li>South Park</li>
+                        </ul>
+
+                    </div>
+                </section>
+            </main>    
+            
+            
+        </div>
+        <footer>
+                <p>© FPG 2021</p>
+        </footer>        
+    </div>
+
+
+
+
+    
+</body>
+</html>

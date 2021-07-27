@@ -1,0 +1,273 @@
+/* RESET*/
+*{
+    padding:0;
+    margin:0;
+    border:0;
+    box-sizing: border-box;
+    text-decoration:none;
+    list-style-type: none;
+    border-collapse: collapse;
+}
+
+/*PÁGINA */
+html{
+    background-color:rgba(255,252,232,1);
+}
+
+body{
+    width: 75vw;
+    margin: 0 auto;
+    background-color: white;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size:18px;
+    line-height:1.2rem;
+    color:black;
+    padding-top: 2vw;
+}
+
+h1,h2,h3,h4,h5,h6,
+.negrita , .fecha, .destColor,
+.separadorColor, .destacadoLista{
+    font-family: 'Josefin Slab', serif;
+
+}
+
+.logo{
+    max-width:15vw;
+    display:block;
+    margin:0 auto;
+
+}
+
+h1{
+    text-align:center;
+    font-size: 3.5rem;
+    margin: 2rem 0;
+    color:rgb(150, 12, 131);
+}
+header nav{
+    padding: 4rem 0 0 0;
+}
+
+header nav ul{
+    width:50%;
+    margin:0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+nav ul li a {
+    display:inline-block;
+    color:rgba(0,0,0,.6);
+    font-size: 1.3rem;
+    padding: 0.5rem 2rem;
+
+}
+nav ul li a:hover{
+    /* background-color:rgba(150, 12, 131,.5); */
+    background-color:hsla(59, 100%, 44%,.2);
+    color:rgb(150, 12, 131);
+}
+
+header .intro{
+    width: 80%;
+    margin:5rem auto;
+    padding:1rem 3rem;
+    /* background-color:hsla(328, 49%, 65%,.2); */
+    /* background-color:hsl(59, 100%, 44%,.3); */
+    background-color:rgba(0,0,0,.1);
+    border-radius: 1.2rem;
+}
+
+header p{
+    font-style: italic;
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height:1.5rem;
+    margin:2rem 0;
+    text-align:center;
+}
+
+main{
+    width:100%;
+    padding: 0 2vw;
+    display:flex;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.x70ciento{
+    width: 75%;
+    align-self: flex-start;
+}
+.datosDest{
+    background-color:rgb(150, 12, 131);
+    color:white;
+    font-size: 1.3rem;
+    padding: 1rem 1rem 1rem 5rem;
+    border-radius: 0 20px 20px 0;
+    margin-top:6rem;
+}
+
+aside{
+    max-width:25%;
+    background-color: hsl(59, 100%, 44%,.3);
+    margin-top:6rem;
+    border-radius: 0 0 3rem 0;
+    align-self: stretch;
+
+}
+
+.foto{
+    max-width: 250px;
+    max-height:250px;
+    border-radius: 50%;
+    border: 5px solid hsl(328, 49%, 65%);
+    overflow: hidden;
+    margin-top: -8rem;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+.foto img{
+    width:100%;
+    
+}
+
+.datos,.idiomas{
+    margin:2rem 1rem 2rem 1rem;
+}
+
+.datos h2, .idiomas h2, .cualidades h2{
+    text-align:center;
+    color:rgb(150, 12, 131);
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+}
+
+.idiomas h2, .cualidades h2{
+    font-size: 2rem;
+}
+
+dl{
+    font-size: 1.25rem;
+    line-height: 1.6rem;
+}
+
+dt{
+    font-weight: bold;
+    opacity: 0.4;
+    margin-top: 1rem;
+}
+
+.cualidades{
+    background-color:rgba(0,0,0,.1);
+    border-radius: 0 0 3rem 0;
+    margin:0 0 5rem 0;
+    padding:1rem 1rem 3rem 1rem;
+}
+
+.destacadoLista{
+    text-align:center;
+    color:rgb(150, 12, 131);
+    font-size: 2rem;
+    margin: 2rem 0;
+    font-weight: bold;
+}
+
+.cualidades li{
+    line-height:2rem;
+}
+.contenedor{
+    padding:2rem 2rem 2rem 5rem
+}
+.epigrafe{
+    margin: 3rem 0;
+}
+
+.pastilla{
+    padding: 0.8rem 2.5rem;
+    border-radius: 2rem;
+    background-color: #e83e5c;
+    color:white;
+    display:inline-block;
+    margin: 0 0 2rem 0;
+}
+
+h2.pastilla.anaranjado{
+    background-color:#f5a280 ;
+}
+
+h2.pastilla.verde{
+    background-color:#4e8d83 ;
+}
+
+h2.pastilla.naranja{
+    background-color:#f4973a ;
+}
+.bloqEmleos{
+    margin:0 0 2rem 0;
+    line-height: 1.6rem;
+    font-weight: 300;
+}
+.fecha{
+    font-weight:700;
+    color: #e83e5c;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+.negrita{
+    font-weight: 800;
+    font-size: 1.2rem;;
+}
+
+.destColor{
+    color: #e83e5c;
+    opacity:0.8rem;
+    font-weight: 800;
+}
+
+.linea{
+    display: inline-block;
+    font-size: 0.9rem;
+}
+
+.skills h4:first-of-type{
+    margin: 0rem 0 1rem 0;  
+}
+.skills h4{
+    font-size: 1.25rem;
+    opacity: 0.5;
+    margin: 1rem 0 1rem 0;
+}
+
+.skills p{
+    margin: 0 0 2rem 0;
+}
+span.separadorColor.anaranjado{
+    font-weight: 900;
+    color: #f5a280 ;
+}
+
+span.separadorColor.naranja{
+    font-weight: 900;
+    color: #f4973a ;
+}
+
+span.separadorColor.naranja{
+    font-weight: 900;
+    color: #4e8d83 ;
+}
+.epigrafe ul li{
+    margin:0 0 1.5rem 0;
+    line-height: 1.5rem;
+}
+
+.centro{
+    text-transform: capitalize;
+    color: rgba(0,0,0,.6);
+    font-size: 0.9rem;
+}
+

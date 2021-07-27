@@ -1,0 +1,47 @@
+
+.contenido{
+    width: 100%;
+    margin-bottom: 5rem;
+}
+
+h2.pastilla.central{
+    display:block;
+    margin: 0 auto;
+    text-align: center;
+    margin:4rem 0 3rem 0;
+}
+
+.cajaCentral{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.card{
+    width: 32%;
+    box-shadow: 2px 2px 5px 1px rgba(0,0,0,.2);
+    border-radius: 25px;
+    overflow: hidden;
+    margin-bottom:3rem;
+}
+
+.card h3{
+    background-color: #4e8d83 ;
+    color: white;
+    text-align: center;
+    font-size:1.5rem;
+    padding: 1rem 0.5rem 0.5rem 0.5rem;
+}
+
+.card.naranja h3{
+    background-color: #f4973a ;
+}
+.card.magenta h3{
+    background-color: rgb(150, 12, 131) ;
+}
+.card p{
+    padding: 1.2rem;
+}
+.card img{
+    max-height: 350px;
+}
